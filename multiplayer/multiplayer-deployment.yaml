@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: multiplayer-deployment
 spec:
+  replicas: 1 
   selector:
     matchLabels:
       app: multiplayer
-  replicas: 1 
   template:
     metadata:
       labels:
         app: multiplayer
     spec:
+      imagePullSecrets:
+        - name: docker-credentials
       containers:
       - name: bitsnake-multiplayer
         image: bitsnake/multiplayer:main
-        imagePullSecrets:
-          - name: docker-credentials
         resources:
             limits:
               cpu: 100m
