@@ -14,13 +14,12 @@ spec:
     spec:
       containers:
       - name: bitsnake-multiplayer
-        defaultns: library
-        ping: yes
-        api_url: https://registry-1.docker.io
-        credentials: pullsecret:argocd/dockerhub-secret
         image: bitsnake/multiplayer:main
+        imagePullSecrets:
+          - name: pullsecret:argocd/dockerhub-secret
         resources:
             limits:
+              cpu: 100m
               memory: 200Mi
             requests:
               cpu: 100m
