@@ -25,7 +25,7 @@ spec:
               cpu: 100m
               memory: 200Mi
         livenessProbe:
-          tcpSocket:
+          httpGet:
             port: app-port
           periodSeconds: 10
           timeoutSeconds: 10
