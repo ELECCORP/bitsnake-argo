@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: bitsnake-multiplayer
+        pullsecret: argocd/dockerhub-secret
         image: bitsnake/multiplayer:main
         resources:
             limits:
