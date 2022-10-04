@@ -25,9 +25,13 @@ spec:
               cpu: 100m
               memory: 200Mi
         livenessProbe:
+          tcpSocket:
+            port: multiplayer-port
           periodSeconds: 10
           timeoutSeconds: 10
         ports:
-        - containerPort: 4000
+        - name: multiplayer-port
+          containerPort: 4000
+          hostPort: 4000
       
         
