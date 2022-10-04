@@ -28,9 +28,8 @@ spec:
           httpGet:
             path: /health-check
             port: http-port
-          initialDelaySeconds: 10
+          initialDelaySeconds: 30
           periodSeconds: 5
-          failureThreshold: 2
         ports:
         - name: app-port
           containerPort: 4000
