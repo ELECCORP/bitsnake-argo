@@ -25,16 +25,14 @@ spec:
               cpu: 100m
               memory: 200Mi
         livenessProbe:
-          exec:
-            command:
-              - "ls"
-          # httpGet:
-            # port: app-port
+          httpGet:
+            port: http-port
           periodSeconds: 10
           timeoutSeconds: 10
         ports:
         - name: app-port
           containerPort: 4000
           hostPort: 4000
-      
-        
+        - name: http-port
+          containerPort: 3000
+          hostPort: 3000
