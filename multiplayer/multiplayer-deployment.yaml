@@ -26,9 +26,11 @@ spec:
               memory: 200Mi
         livenessProbe:
           httpGet:
+            path: /health-check
             port: http-port
-          periodSeconds: 10
-          timeoutSeconds: 10
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          failureThreshold: 2
         ports:
         - name: app-port
           containerPort: 4000
