@@ -16,7 +16,7 @@ spec:
       - name: bitsnake-multiplayer
         image: bitsnake/multiplayer:main
         imagePullSecrets:
-          - name: pullsecret:argocd/dockerhub-secret
+          - name: docker-credentials
         resources:
             limits:
               cpu: 100m
