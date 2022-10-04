@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: multiplayer-deployment
 spec:
   selector:
     matchLabels:
-      app: nginx
+      app: multiplayer
   replicas: 1 
   template:
     metadata:
       labels:
-        app: nginx
+        app: multiplayer
     spec:
       containers:
       - name: bitsnake-multiplayer
@@ -22,6 +22,6 @@ spec:
               cpu: 100m
               memory: 200Mi
         ports:
-        - containerPort: 80
+        - containerPort: 4000
       
         
