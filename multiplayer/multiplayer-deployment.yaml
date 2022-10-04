@@ -26,11 +26,11 @@ spec:
               memory: 200Mi
         livenessProbe:
           tcpSocket:
-            port: multiplayer-port
+            port: app-port
           periodSeconds: 10
           timeoutSeconds: 10
         ports:
-        - name: multiplayer-port
+        - name: app-port
           containerPort: 4000
           hostPort: 4000
       
