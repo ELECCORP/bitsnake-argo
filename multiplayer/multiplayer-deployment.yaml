@@ -49,5 +49,5 @@ spec:
       volumes:
         - name: cache-volume
           hostPath:
-            path: /usr/local/multiplayer/
+            path: /usr/local/multiplayer/app
             
