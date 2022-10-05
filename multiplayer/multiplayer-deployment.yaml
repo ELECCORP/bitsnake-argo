@@ -30,6 +30,12 @@ spec:
             port: http-port
           initialDelaySeconds: 30
           periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http-port
+          initialDelaySeconds: 30
+          periodSeconds: 5
         ports:
         - name: app-port
           containerPort: 4000
