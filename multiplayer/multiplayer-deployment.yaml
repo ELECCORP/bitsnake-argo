@@ -18,7 +18,7 @@ spec:
       - name: bitsnake-multiplayer
         image: bitsnake/multiplayer:main
         volumeMounts:
-        - name: cache-volume
+        - name: probe-volume
           mountPath: /usr/local/multiplayer/app
         resources:
             limits:
@@ -47,7 +47,7 @@ spec:
           containerPort: 3000
           hostPort: 3000
       volumes:
-        - name: cache-volume
+        - name: probe-volume
           hostPath:
             path: /usr/local/multiplayer/app
             type: DirectoryOrCreate
