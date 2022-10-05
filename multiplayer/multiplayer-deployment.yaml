@@ -19,7 +19,7 @@ spec:
         image: bitsnake/multiplayer:main
         volumeMounts:
         - name: cache-volume
-          mountPath: /usr/local/multiplayer/app
+          mountPath: /usr/local/multiplayer
         resources:
             limits:
               cpu: 100m
@@ -49,6 +49,6 @@ spec:
       volumes:
         - name: cache-volume
           hostPath:
-            path: /usr/local/multiplayer/app
+            path: /usr/local/multiplayer
             type: DirectoryOrCreate
             
