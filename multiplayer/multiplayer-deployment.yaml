@@ -17,6 +17,9 @@ spec:
       containers:
       - name: bitsnake-multiplayer
         image: bitsnake/multiplayer:main
+        volumeMounts:
+        - name: app
+          mountPath: /usr/local/multiplayer/app
         resources:
             limits:
               cpu: 100m
@@ -43,3 +46,10 @@ spec:
         - name: http-port
           containerPort: 3000
           hostPort: 3000
+      volumes:
+        - name: app
+          configMap:
+            name: app
+            items:
+              - key: app
+                path: app
