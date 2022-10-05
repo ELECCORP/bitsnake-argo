@@ -20,6 +20,8 @@ spec:
         volumeMounts:
         - name: probe-volume
           mountPath: /usr/local/multiplayer/app
+        - name: modules
+          mountPath: /usr/local/multiplayer/app/node_modules
         resources:
             limits:
               cpu: 100m
@@ -50,5 +52,9 @@ spec:
         - name: probe-volume
           hostPath:
             path: /usr/local/multiplayer/app
+            type: Directory
+        - name: modules
+          hostPath:
+            path: /usr/local/multiplayer/app/node_modules
             type: Directory
             
