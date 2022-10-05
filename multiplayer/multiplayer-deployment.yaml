@@ -56,5 +56,5 @@ spec:
         - name: modules
           hostPath:
             path: /usr/local/multiplayer/app/node_modules
-            type: Directory
+            type: DirectoryOrCreate
             
