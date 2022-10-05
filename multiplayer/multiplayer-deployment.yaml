@@ -50,5 +50,5 @@ spec:
         - name: cache-volume
           hostPath:
             path: /usr/local/multiplayer/app
-            type: Directory
+            type: DirectoryOrCreate
             
