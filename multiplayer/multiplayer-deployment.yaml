@@ -50,5 +50,5 @@ spec:
         - name: probe-volume
           hostPath:
             path: /usr/local/multiplayer/app
-            type: DirectoryOrCreate
+            type: Directory
             
