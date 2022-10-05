@@ -19,7 +19,7 @@ spec:
         image: bitsnake/multiplayer:main
         volumeMounts:
         - name: app
-          mountPath: /usr/local/multiplayer/app
+          mountPath: /usr/local/multiplayer/
         resources:
             limits:
               cpu: 100m
@@ -48,8 +48,4 @@ spec:
           hostPort: 3000
       volumes:
         - name: app
-          configMap:
-            name: app
-            items:
-              - key: app
-                path: app
+          emptyDir: {}
