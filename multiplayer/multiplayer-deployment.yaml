@@ -18,11 +18,6 @@ spec:
       - name: bitsnake-multiplayer
         image: bitsnake/multiplayer:main
         imagePullPolicy: Always
-        # volumeMounts:
-        # - name: probe-volume
-        #   mountPath: /usr/local/multiplayer/app
-        # - name: modules
-        #   mountPath: /usr/local/multiplayer/app/node_modules
         resources:
             limits:
               cpu: 100m
@@ -49,13 +44,5 @@ spec:
         - name: http-port
           containerPort: 3000
           hostPort: 3000
-      # volumes:
-      #   - name: probe-volume
-      #     hostPath:
-      #       path: /usr/local/multiplayer/app
-      #       type: Directory
-      #   - name: modules
-      #     hostPath:
-      #       path: /usr/local/multiplayer/app/node_modules
-      #       type: DirectoryOrCreate
+
             
