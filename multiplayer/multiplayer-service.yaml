@@ -9,11 +9,11 @@ spec:
     app: multiplayer
   type: LoadBalancer
   ports:
-    - name: app-port
+    - name: app
       protocol: TCP
       port: 3000
       targetPort: 3000
-    - name: http-port
+    - name: http
       protocol: TCP
       port: 4000
       targetPort: 4000

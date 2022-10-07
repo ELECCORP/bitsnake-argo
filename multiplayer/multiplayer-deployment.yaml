@@ -42,10 +42,10 @@ spec:
         #   initialDelaySeconds: 30
         #   periodSeconds: 5
         ports:
-        - name: app-port
+        - name: app
           containerPort: 4000
           hostPort: 4000
-        - name: http-port
+        - name: http
           containerPort: 3000
           hostPort: 3000
 
