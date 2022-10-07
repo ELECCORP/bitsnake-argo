@@ -29,24 +29,15 @@ spec:
           failureThreshold: 3
           httpGet:
             path: /health-check
-            port: 3000
+            port: app
             scheme: HTTP
           initialDelaySeconds: 60
           periodSeconds: 20
           successThreshold: 1
           timeoutSeconds: 10
-        # readinessProbe:
-        #   httpGet:
-        #     path: /
-        #     port: http-port
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 5
         ports:
         - name: app
           containerPort: 4000
           hostPort: 4000
-        - name: http
-          containerPort: 3000
-          hostPort: 3000
 
             
