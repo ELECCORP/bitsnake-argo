@@ -7,14 +7,13 @@ metadata:
 spec:
   selector:
     app: multiplayer
-  # type: LoadBalancer
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP
-      port: 4000
-      targetPort: 4000
-    - name: https
-      protocol: TCP
       port: 3000
       targetPort: 3000
-    
+    - name: app
+      protocol: TCP
+      port: 4000
+      targetPort: 4000
