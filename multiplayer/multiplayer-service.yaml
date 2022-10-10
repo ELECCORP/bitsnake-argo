@@ -17,5 +17,3 @@ spec:
       protocol: TCP
       port: 4000
       targetPort: 4000
-  externalIPs:
-    - 104.198.205.71
