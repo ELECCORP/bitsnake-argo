@@ -32,7 +32,7 @@ spec:
             port: app
             scheme: HTTP
           initialDelaySeconds: 60
-          periodSeconds: 20
+          periodSeconds: 2
           successThreshold: 1
           timeoutSeconds: 10
         ports:
