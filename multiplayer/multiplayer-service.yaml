@@ -16,5 +16,5 @@ spec:
     - name: app
       protocol: TCP
       port: 4000
-      # nodePort: 30036
+      nodePort: 34000
       targetPort: 4000
