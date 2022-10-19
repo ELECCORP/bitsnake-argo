@@ -6,7 +6,7 @@ metadata:
     name: myingress
 spec:
   rules:
-  - host: http://139.144.168.82/
+  - host: http://139.144.168.82
     http:
       paths:
       - pathType: Prefix
