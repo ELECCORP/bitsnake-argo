@@ -20,11 +20,11 @@ spec:
         imagePullPolicy: Always
         resources:
             limits:
-              cpu: 200m
-              memory: 400Mi
+              cpu: 100m
+              memory: 200Mi
             requests:
-              cpu: 200m
-              memory: 400Mi
+              cpu: 100m
+              memory: 200Mi
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -32,7 +32,7 @@ spec:
             port: app
             scheme: HTTP
           initialDelaySeconds: 60
-          periodSeconds: 120
+          periodSeconds: 20
           successThreshold: 1
           timeoutSeconds: 10
         ports:
