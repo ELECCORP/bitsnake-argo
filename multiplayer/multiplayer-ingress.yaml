@@ -4,7 +4,7 @@ metadata:
   name: my-ingress
 spec:
   rules:
-    - host: cluster.bitsnake.win
+    - host: pod.bitsnake.win
       http:  
         paths:
           - path: /
