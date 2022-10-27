@@ -5,4 +5,4 @@ metadata:
 spec: 
   backend: 
     serviceName: multiplayer-service
-    servicePort: 5000
+    servicePort: 4000
