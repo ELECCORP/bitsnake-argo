@@ -4,5 +4,5 @@ metadata:
   name: multiplayer-ingress
 spec: 
   backend: 
-    serviceName: multiplayer-service
+    serviceName: app
     servicePort: 4000
