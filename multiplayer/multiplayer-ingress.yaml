@@ -8,8 +8,15 @@ spec:
   ingressClassName: nginx
   rules:
     - host: cluster.bitsnake.win
-    - http:
+      http:
         paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: multiplayer-service
+                port:
+                  number: 4000
           - path: /multiplayer
             pathType: Prefix
             backend:
