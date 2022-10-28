@@ -8,7 +8,7 @@ spec:
   - host: cluster.bitsnake.win
     http:
       paths:
-      - path: /
+      - path: /ingress
         pathType: Prefix
         backend:
           service:
