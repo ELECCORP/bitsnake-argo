@@ -7,5 +7,5 @@ spec:
     service:
       name: multiplayer-service
       port:
-        number: 30400
+        number: 4000
     
