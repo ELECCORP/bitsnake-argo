@@ -11,10 +11,10 @@ spec:
   sessionAffinityConfig:
     clientIP:
       timeoutSeconds: 3600
-  type: NodePort
+  # type: NodePort
   ports:
     - name: app
       protocol: TCP
       port: 4000
-      nodePort: 30400
+      # nodePort: 30400
       targetPort: 4000
