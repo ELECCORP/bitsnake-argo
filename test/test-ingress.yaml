@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: simple-fanout-example
 spec:
+  ingressClassName: nginx
   rules:
   - host: cluster.bitsnake.win
     http:
