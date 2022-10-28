@@ -11,7 +11,7 @@ spec:
   sessionAffinityConfig:
     clientIP:
       timeoutSeconds: 3600
-  # type: NodePort
+  type: ClusterIP
   ports:
     - name: app
       protocol: TCP
