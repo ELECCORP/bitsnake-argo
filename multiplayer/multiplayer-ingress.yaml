@@ -4,11 +4,11 @@ metadata:
   name: my-ingress
 spec:
   rules:
-  - host: "cluster.bitsnake.win"
+  - host: cluster.bitsnake.win
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: /
         backend:
           service:
             name: multiplayer-service
