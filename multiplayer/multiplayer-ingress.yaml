@@ -1,17 +1,17 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: my-ingress
-# spec:
-#   rules:
-#   - host: cluster.bitsnake.win
-#     http:
-#       paths:
-#       - pathType: Prefix
-#         path: /
-#         backend:
-#           service:
-#             name: multiplayer-service
-#             port:
-#               number: 4000
-    
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: multiplayer-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cluster.bitsnake.win
+    http:
+      paths:
+      - path: /ingress
+        pathType: Prefix
+        backend:
+          service:
+            name: multiplayer-service
+            port:
+              number: 4000
