@@ -3,9 +3,15 @@ kind: Ingress
 metadata:
   name: my-ingress
 spec:
-  defaultBackend:
-    service:
-      name: multiplayer-service
-      port:
-        number: 4000
+  rules:
+  - host: "cluster.bitsnake.win"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: multiplayer-service
+            port:
+              number: 80
     
