@@ -26,5 +26,5 @@ spec:
                   number: 4000
   tls:
   - hosts:
-    - cluster.bitsnake.win/multiplayer
+    - cluster.bitsnake.win
     secretName: tls-secret-multiplayer
