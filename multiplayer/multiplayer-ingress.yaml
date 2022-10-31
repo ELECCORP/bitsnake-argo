@@ -26,5 +26,5 @@ spec:
                   number: 4000
   tls:
   - hosts:
-    - demo.mlopshub.com
+    - cluster.bitsnake.win
     secretName: tls-secret-multiplayer
