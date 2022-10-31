@@ -6,11 +6,6 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
-  tls: 
-    - 
-      hosts: 
-        - cluster.bitsnake.win
-      secretName: tls-secret-multiplayer
   rules:
     - host: cluster.bitsnake.win
       http:
@@ -29,3 +24,7 @@ spec:
                 name: multiplayer-service
                 port:
                   number: 4000
+  tls:
+  - hosts:
+    - demo.mlopshub.com
+    secretName: tls-secret-multiplayer
