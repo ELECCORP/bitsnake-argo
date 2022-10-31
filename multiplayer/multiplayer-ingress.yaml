@@ -24,7 +24,7 @@ spec:
                 name: multiplayer-service
                 port:
                   number: 4000
-  # tls:
-  # - hosts:
-  #   - cluster.bitsnake.win
-  #   secretName: tls-secret-multiplayer
+  tls:
+  - hosts:
+    - cluster.bitsnake.win
+    secretName: tls-secret-multiplayer
