@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: multiplayer-ingress
+  name: cluster-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -14,9 +14,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: multiplayer-service
+                name: web-service
                 port:
-                  number: 4000
+                  number: 443
           - path: /multiplayer
             pathType: Prefix
             backend:
@@ -25,6 +25,6 @@ spec:
                 port:
                   number: 4000
   tls:
-  - hosts:
-    - cluster.bitsnake.win
-    secretName: tls-secret-multiplayer
+    - hosts:
+        - cluster.bitsnake.win
+      secretName: tls-secret-multiplayer

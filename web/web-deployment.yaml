@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      imagePullSecrets:
+        - name: docker-credentials
+      containers:
+        - name: bitsnake-web
+          image: bitsnake/web:main
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 100m
+              memory: 200Mi
+            requests:
+              cpu: 100m
+              memory: 200Mi
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /
+              port: web
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            successThreshold: 1
+            timeoutSeconds: 10
+          ports:
+            - name: web
+              containerPort: 443
+              hostPort: 443
