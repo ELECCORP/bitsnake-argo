@@ -16,7 +16,7 @@ spec:
               service:
                 name: web-service
                 port:
-                  number: 443
+                  number: 80
           - path: /multiplayer
             pathType: Prefix
             backend:

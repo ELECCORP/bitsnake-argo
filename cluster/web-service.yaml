@@ -5,15 +5,13 @@ metadata:
   labels:
     app: web
 spec:
-  selector:
-    app: web
-  sessionAffinity: ClientIP
-  sessionAffinityConfig:
-    clientIP:
-      timeoutSeconds: 3600
   type: NodePort
   ports:
-    - name: app
+    - name: http
+      protocol: TCP
+      port: 80
+    - name: https
       protocol: TCP
       port: 443
-      targetPort: 443
+  selector:
+    app: web

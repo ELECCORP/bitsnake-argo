@@ -36,6 +36,5 @@ spec:
             successThreshold: 1
             timeoutSeconds: 10
           ports:
-            - name: web
-              containerPort: 443
-              hostPort: 443
+            - containerPort: 80
+            - containerPort: 443
