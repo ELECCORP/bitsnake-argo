@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: multiplayer-deployment
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: multiplayer
@@ -15,29 +15,27 @@ spec:
       imagePullSecrets:
         - name: docker-credentials
       containers:
-      - name: bitsnake-multiplayer
-        image: bitsnake/multiplayer:main
-        imagePullPolicy: Always
-        resources:
+        - name: bitsnake-multiplayer
+          image: bitsnake/multiplayer:main
+          imagePullPolicy: Always
+          resources:
             limits:
               cpu: 100m
               memory: 200Mi
             requests:
               cpu: 100m
               memory: 200Mi
-        livenessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /health-check
-            port: app
-            scheme: HTTP
-          initialDelaySeconds: 60
-          periodSeconds: 20
-          successThreshold: 1
-          timeoutSeconds: 10
-        ports:
-        - name: app
-          containerPort: 4000
-          hostPort: 4000
-
-            
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /health-check
+              port: app
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            successThreshold: 1
+            timeoutSeconds: 10
+          ports:
+            - name: app
+              containerPort: 4000
+              # hostPort: 4000
