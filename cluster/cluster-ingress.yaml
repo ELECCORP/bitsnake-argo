@@ -41,8 +41,10 @@ spec:
           - path: /multiplayer
             pathType: Prefix
             backend:
-              serviceName: multiplayer-service
-              servicePort: 4000
+              service:
+                name: multiplayer-service
+                port:
+                  number: 4000
   tls:
     - hosts:
         - bitsnake.win
