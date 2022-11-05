@@ -7,11 +7,11 @@ metadata:
 spec:
   selector:
     app: multiplayer
-  sessionAffinity: ClientIP
-  sessionAffinityConfig:
-    clientIP:
-      timeoutSeconds: 3600
-  type: NodePort
+  # sessionAffinity: ClientIP
+  # sessionAffinityConfig:
+  #   clientIP:
+  #     timeoutSeconds: 3600
+  type: ClusterIP
   ports:
     - name: app
       protocol: TCP
